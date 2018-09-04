@@ -2,10 +2,10 @@
 /**
  * Redirects traffic from https:// to http://
  *
- * #WordPress
- *
  * @since Tuesday, September 4, 2018
  * @package code
+ *
+ * @keywords WordPress, http, https, traffic, redirect, ssl
  */
 
 // @codingStandardsIgnoreLine: Add this to wp-config.php.
