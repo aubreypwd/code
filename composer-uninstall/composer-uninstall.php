@@ -11,7 +11,7 @@
  *
  * See example at: https://github.com/aubreypwd/Bash/search?q=composer+uninstall&unscoped_q=composer+uninstall
  *
- * @version  1.0.0  Monday, October 29, 2018
+ * @version  1.0.1  Monday, October 29, 2018 <Better progress messages.>
  * @author          Aubrey Portwood <aubrey@webdevstudios.com>
  */
 
@@ -31,14 +31,27 @@ $paths = array_unique( array_map( function( $path ) {
 		return '';
 	}
 
+	// Find the path's of the packages.
 	foreach ( $packages as $package ) {
+
+		// Something smaller to show...
+		$p = trim( $package );
+
+		if ( ! empty( $p ) ) {
+
+			// Finding package.
+			echo "Finding {$p}...";
+		}
 
 		// Remove the package names.
 		$path = str_replace( $package, '', $path );
-	}
 
-	// Show progress.
-	echo ".";
+		if ( ! empty( $p ) ) {
+
+			// Done.
+			echo "Done!\n";
+		}
+	}
 
 	return stripslashes( trim( $path ) );
 }, explode( "\n", shell_exec( "composer show --path" ) ) ) );
@@ -50,11 +63,17 @@ if ( count( $paths ) > 1 && is_array( $paths ) ) {
 	foreach ( $paths as $path ) {
 		if ( file_exists( $path ) ) {
 
-			// Show progress.
-			echo ".";
+			// Get something smaller to show.
+			$small_path = basename( $path );
+
+			// Show a message.
+			echo "Removing {$small_path}...";
 
 			// Try and remove that file/dir.
 			shell_exec( "rm -R \"{$path}\"" );
+
+			// Done!
+			echo "Done!\n";
 		}
 	}
 
