@@ -7,7 +7,8 @@
  * this makes it easy to to a simple re-install of all packages.
  *
  * I would chmod +x this file, then create an alias that will execute this
- * script.
+ * script. Or, you could chmod +x this file and also create a symlink
+ * in e.g. /usr/local/bin to it so you can execute it easily.
  *
  * @version  1.0.0  Monday, October 29, 2018
  * @author          Aubrey Portwood <aubrey@webdevstudios.com>
