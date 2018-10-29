@@ -9,6 +9,8 @@
  * I would chmod +x this file, then create an alias that will execute this
  * script.
  *
+ * See example at: https://github.com/aubreypwd/Bash/search?q=composer+uninstall&unscoped_q=composer+uninstall
+ *
  * @version  1.0.0  Monday, October 29, 2018
  * @author          Aubrey Portwood <aubrey@webdevstudios.com>
  */
