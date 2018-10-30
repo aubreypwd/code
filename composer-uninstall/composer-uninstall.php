@@ -70,7 +70,7 @@ if ( count( $paths ) > 1 && is_array( $paths ) ) {
 			echo "Removing {$small_path}...";
 
 			// Try and remove that file/dir.
-			shell_exec( "rm -R \"{$path}\"" );
+			shell_exec( "rm -Rf \"{$path}\"" );
 
 			// Done!
 			echo "Done!\n";
