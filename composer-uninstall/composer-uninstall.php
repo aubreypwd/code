@@ -45,7 +45,6 @@ $paths = array_unique( array_map( function( $path ) {
 
 		// Remove the package names.
 		$path = str_replace( $package, '', $path );
-
 		if ( ! empty( $p ) ) {
 
 			// Done.
