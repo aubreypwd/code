@@ -37,19 +37,8 @@ $paths = array_unique( array_map( function( $path ) {
 		// Something smaller to show...
 		$p = trim( $package );
 
-		if ( ! empty( $p ) ) {
-
-			// Finding package.
-			echo "Finding {$p}...";
-		}
-
 		// Remove the package names.
 		$path = str_replace( $package, '', $path );
-		if ( ! empty( $p ) ) {
-
-			// Done.
-			echo "Done!\n";
-		}
 	}
 
 	return stripslashes( trim( $path ) );
@@ -76,6 +65,5 @@ if ( count( $paths ) > 1 && is_array( $paths ) ) {
 		}
 	}
 
-	// The the user they can now run composer install.
-	echo "\nYou can now run composer install.";
+	echo "\nFinished.";
 }
