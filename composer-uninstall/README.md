@@ -1,3 +1,7 @@
+Note this has been deprecated for https://github.com/aubreypwd/composer-uninstall
+
+____________
+
 # composer-uninstall.php
 
 This file was created because at WebDevStudios we use composer to manage dependencies and shared packages. We also use Git and a `composer.json` file to manage those dependences. Well, when switching branches where that `composer.json` file changes, we can't just remove a `vendor/` folder and do `composer-install` as our packages are installed to different plugin and theme locations. 
