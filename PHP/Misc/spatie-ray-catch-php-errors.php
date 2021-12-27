@@ -13,7 +13,7 @@ function ____error_to_spatie_ray() {
 
 	$error = error_get_last();
 
-	if( $error === NULL ) {
+	if ( $error === NULL ) {
 		return;
 	}
 
