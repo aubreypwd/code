@@ -65,6 +65,6 @@ function ____error_to_spatie_ray() {
 		return;
 	}
 
-	\ray( $error ); // Just log the error to Ray (in red).
+	\ray( $error ); // Just log the error to Ray.
 }
 register_shutdown_function( '____error_to_spatie_ray' );
