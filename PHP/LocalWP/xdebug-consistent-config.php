@@ -36,7 +36,7 @@ foreach ( glob( dirname( dirname( __DIR__ ) ) . "/conf/php*", GLOB_BRACE ) as $p
 		array(
 
 			// xDebug v3
-			'xdebug.client_port=9003', // Set your preferred port here.
+			'xdebug.client_port=9003',
 			'xdebug.start_with_request=trigger',
 
 			// xDebug v2
@@ -46,7 +46,7 @@ foreach ( glob( dirname( dirname( __DIR__ ) ) . "/conf/php*", GLOB_BRACE ) as $p
 		array(
 
 			// xDebug v3
-			'xdebug.client_port=9021',
+			'xdebug.client_port=9021',  // Set your preferred port here.
 			'xdebug.start_with_request=yes',
 
 			// xDebug v2
