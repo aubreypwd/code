@@ -32,28 +32,26 @@ foreach ( glob( dirname( dirname( __DIR__ ) ) . "/conf/php*", GLOB_BRACE ) as $p
 
 	$contents = file_get_contents( $php_ini );
 
-	// Newer PHP.
 	$contents = str_replace(
 		array(
+
+			// xDebug v3
 			'xdebug.client_port=9003', // Set your preferred port here.
 			'xdebug.start_with_request=trigger',
+
+			// xDebug v2
+			'xdebug.remote_port="9000"',
+			'xdebug.remote_connect_back=Off',
 		),
 		array(
+
+			// xDebug v3
 			'xdebug.client_port=9021',
 			'xdebug.start_with_request=yes',
-		),
-		$contents
-	);
 
-	// Older PHP.
-	$contents = str_replace(
-		array(
-			'xdebug.remote_connect_back=Off',
-			'xdebug.remote_port="9000"',
-		),
-		array(
-			"xdebug.remote_connect_back=On\nxdebug.remote_autostart=1",
+			// xDebug v2
 			'xdebug.remote_port="9021"', // Set your preferred port here.
+			"xdebug.remote_connect_back=On\nxdebug.remote_autostart=1",
 		),
 		$contents
 	);
