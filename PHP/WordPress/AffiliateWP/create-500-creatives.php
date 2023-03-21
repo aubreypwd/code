@@ -5,14 +5,14 @@
  * First you need to composer require fakerphp/faker and require autoload.php,
  * or this won't work.
  * 
- * Then load your site with ?create_500_affiliates
+ * Then load your site with ?create_500_creatives
  * 
  * @since Mar 21, 2023
  */
 
 add_action( 'affwp_plugins_loaded', function() {
 
-	if ( isset( $_GET['create_500_affiliates'] ) ) {
+	if ( isset( $_GET['create_500_creatives'] ) ) {
 
 		$faker = \Faker\Factory::create();
 
